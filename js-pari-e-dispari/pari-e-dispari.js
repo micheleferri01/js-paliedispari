@@ -22,6 +22,10 @@ const min = 1;
 const pcNumber = generateRandomNumber(max,min);
 console.log(pcNumber);
 
+// sommo i due numeri
+const sum = userNumber + pcNumber;
+const isSumEven = isNumEven(sum);
+
 // #funzioni
 /**
  * Questa funzione genera un numero randomico compreso nel range specificato
@@ -32,4 +36,14 @@ console.log(pcNumber);
 function generateRandomNumber(num1,num2){
     const randomNumber = Math.floor(Math.random() * (num1 - num2 + 1) + num2);
     return randomNumber
+}
+
+/**
+ * Questa funzione controlla se un numero è pari
+ * @param {number} num numero da controllare
+ * @returns {boolean} ritorna 'true' se il numero è pari
+ */
+function isNumEven(num){
+    const numEven = num % 2 === 0;
+    return numEven
 }

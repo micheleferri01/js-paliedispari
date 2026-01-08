@@ -12,7 +12,7 @@ const userChoice = prompt('pari o dispari', 'pari').trim().toLocaleLowerCase();
 console.log(userChoice);
 
 // chiedo all'utente un numero tra 1 e 5
-const userNumber = parseint(prompt('inserire un numero da 1 a 5', 1));
+const userNumber = parseInt(prompt('inserire un numero da 1 a 5', '1'));
 console.log(userNumber);
 
 

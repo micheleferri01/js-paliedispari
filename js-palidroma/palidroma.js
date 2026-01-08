@@ -6,6 +6,13 @@
 const word = prompt('Inserire una parola', 'alla').trim().toLowerCase();
 console.log(word);
 
+// Invoco la funzione e salvo il risulttato
+let wordIsPalindroma = isWordPalindroma(word);
+console.log(wordIsPalindroma);
+
+// messaggio per l'utente
+const message = wordIsPalindroma? 'La parola inserita è palindroma.': 'La parola inserita non è palidroma.';
+alert(message);
 
 
 // Dichiaro la funzione per controllare se la parola inserita è palidroma
@@ -13,7 +20,7 @@ function isWordPalindroma(text) {
     // dichiaro una variabile dove salvare la parola invertita
     let reversedWord = "";
     
-    // inverto la parola fornita e la salvo nella variabile
+    // inverto la parola fornita e la salvo
     for(let i = 0; i < text.length; i++){
         const currentChar = text[i];
         reversedWord = currentChar + reversedWord;
